@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #e2e8f0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 86px;
+  min-height: 900px;
+  margin: 25px 0 0 25px;
+  padding: 50px 18px 20px;
+
+  color: #64748b;
+  background-color: #ffffff;
+
+  border: 3px solid #e2e8f0;
+  box-shadow: 0px 1px 0px #ffffff, 0px -1px 0px #ffffff, 1px 0px 0px #ffffff,
+    -1px 0px 0px #ffffff;
+  border-radius: 20px;
+
+  transition: all 0.3s linear;
+
+  .sidebar__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    column-gap: 10px;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    img {
+      width: 40px;
+    }
+
+    span {
+      color: #0023c4;
+      display: none;
+    }
+
+    button {
+      position: absolute;
+      top: 20px;
+      right: -74px;
+
+      width: 32px;
+      height: 32px;
+
+      color: #64748b;
+      background-color: #ffffff;
+      border: none;
+      border-radius: 50%;
+
+      transition: all 0.3s linear;
+    }
+  }
+
+  .sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+    margin-top: 24px;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 20px;
+      padding: 15px 22px;
+
+      font-size: 18px;
+      font-weight: 700;
+
+      border-radius: 15px;
+
+      &:hover {
+        background-color: #f1f5f9;
+      }
+
+      &:active {
+        background-color: #f0f2ff;
+      }
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .sidebar__footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    row-gap: 8px;
+
+    div {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      padding: 10px 15px;
+
+      font-size: 18px;
+      font-weight: 700;
+
+      border-radius: 20px;
+
+      &:hover {
+        background-color: #f1f5f9;
+      }
+
+      &:active {
+        background-color: #f0f2ff;
+      }
+    }
+    span {
+      display: none;
+    }
+  }
+}
+
+.opened {
+  width: 265px;
+  padding: 50px 25px 20px;
+
+  .sidebar__header {
+    span {
+      display: block;
+    }
+
+    button {
+      right: -40px;
+
+      background-color: #e2e8f0;
+    }
+  }
+
+  .sidebar__nav {
+    row-gap: 18px;
+    div {
+      justify-content: flex-start;
+      padding: 10px 15px;
+
+      border-radius: 20px;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .sidebar__footer {
+    row-gap: 7px;
+
+    div {
+      padding: 6px 15px;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}
